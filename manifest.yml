@@ -1,6 +1,15 @@
+---
+declared-services:
+  b9691359-7d1e-4fb9-8257-713ad4139b14
+  label: conversation
+  plan: free
 applications:
 - name: watson-assistant-simple
   command: npm start
   path: .
   memory: 256M
   instances: 1
+  services:
+  - b9691359-7d1e-4fb9-8257-713ad4139b14
+  env:
+    NPM_CONFIG_PRODUCTION: false
